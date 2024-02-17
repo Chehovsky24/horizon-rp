@@ -1,1 +1,1 @@
-console.log('Данный мод создан на бесплатной основе.')
+import './utils/database';

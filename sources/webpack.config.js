@@ -1,5 +1,6 @@
 const path = require('path');
 const TerserPlugin = require("terser-webpack-plugin");
+const nodeExternals = require('webpack-node-externals');
 
 const encryption = {
     optimization: {
@@ -51,7 +52,9 @@ const server = {
     output: {
         path: path.resolve(__dirname, '../packages/server/'),
         filename: 'index.js'
-    }
+    },
+	externals: [nodeExternals()],
+    target: 'node'
 }
 
 module.exports = [client, server]
