@@ -1,0 +1,348 @@
+.auth-main {
+	width: auto;
+	height: auto;
+	min-width: 21.354vw;
+	max-width: 21.354vw;
+
+	&_wrapper {
+		position: absolute;
+		top: 50%;
+		right: 5.2vw;
+		height: auto;
+		width: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		transform: translateY(-50%);
+	}
+
+	.flex-row {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.header-title {
+		font-style: normal;
+		font-weight: 700;
+		font-size: $s36px;
+		line-height: 4.578vh;
+
+		text-transform: uppercase;
+		text-align: right;
+	}
+
+	.header-text {
+		font-style: normal;
+		font-weight: 400;
+		font-size: $s20px;
+		line-height: 2.497vh;
+
+		color: rgba(255, 255, 255, 0.45);
+
+		text-align: right;
+	}
+
+	.button-auth {
+		height: 7.804vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		margin-top: $default-elements-offset;
+		border-radius: $default-border;
+		color: #fff;
+		font-weight: 600;
+		font-size: $s18px;
+		line-height: 2.289vh;
+	}
+
+	.primary {
+		background: linear-gradient(90deg, rgba(243, 9, 37, 0.5), rgba(179, 10, 41, 0.5), $primary-left, $primary-right);
+		background-size: 300%;
+		background-position: left;
+		box-shadow: 0px 0px 45px transparent;
+		transition: background 0.4s ease-out, box-shadow 0.4s ease-out;
+
+		&:hover {
+			background-position: right;
+			box-shadow: 0px 0px 45px rgba(209, 10, 39, 0.15);
+			transition: background 0.4s ease-out, box-shadow 0.4s ease-out;
+		}
+	}
+
+	.gray {
+		background: rgba(255, 255, 255, 0.06);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		color: #fff;
+		transition: background 0.4s ease-out;
+
+		&:hover {
+			background: rgba(255, 255, 255, 0.12);
+			background-position: right;
+		}
+	}
+
+	.red {
+		background: rgba(209, 127, 127, 0.2);
+		border: 1px solid rgba(209, 127, 127, 0.2);
+		color: #fff;
+		transition: background 0.4s ease-out;
+
+		&:hover {
+			background: rgba(209, 127, 127, 0.4);
+			background-position: right;
+		}
+	}
+
+	.reg-button {
+		height: 4.162vh !important;
+		width: 10.416vw !important;
+		font-size: $s12px;
+		margin: 0 !important;
+	}
+
+	.reg-buttons-wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+
+		margin-top: 1.56vh;
+	}
+
+	.reg-text {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 16px;
+		letter-spacing: 0.05em;
+
+		color: rgba(255, 255, 255, 0.45);
+
+		margin-right: $default-offset;
+	}
+
+	.recovery-wrapper {
+		margin-top: 1.04vh;
+		margin-left: 0.52vw;
+		display: flex;
+		flex-direction: row;
+
+		font-style: normal;
+		font-weight: 500;
+		font-size: $s12px;
+		line-height: 1.664vh;
+
+		color: rgba(255, 255, 255, 0.45);
+
+		a {
+			margin-left: 0.26vw;
+			text-decoration-line: underline;
+		}
+	}
+
+	.recovery-inputs {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.auth-input input {
+			width: calc(3.645vw - $default-offset * 3);
+			padding: 0 $default-offset * 1.5 0 $default-offset * 1.5;
+		}
+	}
+
+	.auth-input {
+		display: flex;
+		flex-direction: column;
+		margin-top: $default-elements-offset;
+
+		& img {
+			position: absolute;
+			width: 0.9375vw;
+			height: auto;
+			margin-top: calc(7.284vh / 2);
+			transform: translateY(-50%);
+			margin-left: $default-offset;
+			fill: $primary-center;
+			z-index: 1;
+		}
+
+		.password-show {
+			right: $default-offset;
+			z-index: 999;
+		}
+
+		.auth-input-style-password {
+			padding: 0 calc($default-offset * 2 + 0.9375vw) 0 calc($default-offset * 2 + 0.9375vw);
+		}
+
+		& input {
+			height: 7.284vh;
+			width: auto;
+			background: rgba(91, 91, 91, 0.05);
+			backdrop-filter: none;
+			border-radius: 6px;
+
+			color: rgba(196, 196, 196, 0.45);
+			font-weight: 500;
+			font-size: $s16px;
+			line-height: 1.873vh;
+			padding: 0 $default-offset 0 calc($default-offset * 2 + 0.9375vw);
+
+			transition: background 0.4s;
+		}
+
+		& input:focus {
+			background: rgba(122, 122, 122, 0.1);
+			color: rgba(255, 255, 255, 1);
+
+			transition: background 0.4s;
+		}
+
+		& input:hover {
+			background: rgba(122, 122, 122, 0.1);
+
+			transition: background 0.4s;
+		}
+	}
+}
+
+.auth-main__left-top {
+	position: absolute;
+	top: 10.4vh;
+	left: 5.2vw;
+	height: auto;
+	width: auto;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.auth-main__left {
+	position: absolute;
+	top: 50%;
+	left: 5.2vw;
+	height: auto;
+	width: auto;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	transform: translateY(-50%);
+}
+
+.auth-main__left-row {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+
+	margin-top: 4.162vh;
+
+	img {
+		width: 3.33vh;
+		height: 3.33vh;
+	}
+}
+
+.auth-main__left-row:first-of-type {
+	margin-top: 0;
+}
+
+.auth-main__left-row-wrapper {
+	margin-left: 0.78125vw;
+}
+
+.auth-main__left-row-title {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: $s28px;
+	line-height: 3.538vh;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.auth-main__left-row-text {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	font-size: $s16px;
+	line-height: 1.873vh;
+
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.auth-main__title {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 2.395vw;
+	line-height: 3.746vh;
+	text-transform: uppercase;
+}
+
+.auth-main__subtitle {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.354vw;
+	line-height: 3.121vh;
+	text-transform: uppercase;
+}
+
+.auth-main__name {
+	margin-left: 1.56vw;
+}
+
+.auth-main__logo img {
+	height: 10.4vh;
+	width: 10.4vh;
+}
+
+.offset-top {
+	margin-top: $default-offset;
+}
+
+.recovery-password {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.button-auth {
+		margin-top: 0 !important;
+		min-width: 8.85vw;
+	}
+
+	.header-text {
+		margin-top: 0 !important;
+		max-width: 6.25vw;
+	}
+}
+
+.alert-enter {
+	opacity: 0;
+}
+.alert-enter-active {
+	opacity: 1;
+	transition: opacity 200ms;
+}
+.alert-exit {
+	opacity: 1;
+}
+.alert-exit-active {
+	opacity: 0;
+	transition: opacity 200ms;
+}
+
+.background-blackout-auth {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(89.76deg, rgba(16, 16, 16, 0.9) -32.06%, rgba(13, 13, 13, 0.9) 136.87%);
+	transform: matrix(-1, 0, 0, 1, 0, 0);
+
+	z-index: -1;
+}

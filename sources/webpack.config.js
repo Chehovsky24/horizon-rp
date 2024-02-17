@@ -55,6 +55,6 @@ const server = {
     },
 	externals: [nodeExternals()],
     target: 'node'
-}
+};
 
 module.exports = [client, server]

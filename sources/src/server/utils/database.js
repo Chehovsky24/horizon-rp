@@ -1,6 +1,6 @@
 import mysql from 'mysql';
 
-const database = mysql.createConnection({
+global.database = mysql.createConnection({
     host: mp.config.database.host,
     user: mp.config.database.user,
     password: mp.config.database.password,
