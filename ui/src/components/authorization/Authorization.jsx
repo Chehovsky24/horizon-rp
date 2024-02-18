@@ -18,7 +18,8 @@ class Authorization extends React.Component {
 			activeForm: 'login',
 
 			username: '',
-			password: '',
+			loginReg: '',
+			pass: '',
 			email: '',
 			promo: '',
 			pass1: '',
@@ -174,7 +175,7 @@ class Authorization extends React.Component {
 
 	clickReg() {
 		try {
-			mp.trigger('signup', this.state.email, this.state.username, this.state.pass1, this.state.pass2, this.state.promo); // eslint-disable-line
+			mp.trigger('signup', this.state.email, this.state.loginReg, this.state.pass1, this.state.pass2, this.state.promo); // eslint-disable-line
 		} catch (e) {
 			console.log(e)
 		}
@@ -193,7 +194,7 @@ class Authorization extends React.Component {
 						<img src={logo} />
 					</div>
 					<div className='auth-main__name'>
-						<div className='auth-main__title'>Exsight</div>
+						<div className='auth-main__title'>Horizon</div>
 						<div className='auth-main__subtitle'>Role Play</div>
 					</div>
 				</div>
@@ -319,7 +320,7 @@ class Authorization extends React.Component {
 											placeholder='Придумайте логин'
 											name='create-login'
 											className='reg-input-style'
-											defaultValue={this.state.username}
+											defaultValue={this.state.loginReg}
 											onChange={this.valueLoginReg.bind(this)}
 										/>
 									</div>
