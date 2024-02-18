@@ -27,7 +27,7 @@ class Death extends React.Component {
 					this.setState({buttons: value.buttons})
 				} catch (e) {}
 			}
-		})
+		});
 	}
 
 	getTimeLeft() {
@@ -76,16 +76,9 @@ class Death extends React.Component {
 								fill='white'
 							/>
 						</svg>
-
 						<span className='death__content__title'>Вы без сознания</span>
 						<span className='death__content__killer'>Вас убил {this.state.killer}</span>
 						<div className='death__content__buttons'>
-							<DeathButton
-								text='Вызвать медиков'
-								subtitle='+ 5 мин к ожиданию'
-								type='call_the_medics'
-								disable={this.state.deathChoosen}
-							/>
 							<DeathButton
 								text='Умереть'
 								type='death'

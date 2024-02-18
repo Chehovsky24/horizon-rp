@@ -21,15 +21,16 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- Table structure for accounts
 -- ----------------------------
 DROP TABLE IF EXISTS `accounts`;
-CREATE TABLE `accounts`  (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `socialClub` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `login` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `promo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 0 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+CREATE TABLE IF NOT EXISTS accounts (
+  id INT AUTO_INCREMENT,
+  socialClub VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  login VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  promo VARCHAR(255) DEFAULT NULL,
+  adminlvl INT DEFAULT 0,
+  PRIMARY KEY (id)
+);
 
 -- ----------------------------
 -- Records of accounts

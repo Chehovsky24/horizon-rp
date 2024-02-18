@@ -10,6 +10,7 @@ mp.events.add('sendDataToAuthorization', (player, username, pass) => {
         } else {
             if(rows.length > 0) {
                 console.log('Аккаунт успешно прошел верификацию.');
+                player.data.adminlvl = rows[0].adminlvl;
                 player.call('Ready');
             } else {
                 console.log('Неверный логин или пароль.');
@@ -21,14 +22,14 @@ mp.events.add('sendDataToAuthorization', (player, username, pass) => {
 mp.events.add('sendDataToRegister', (player, email, loginReg, pass1, promo) => {
     console.log('Вывод данных при регистрации:', email, loginReg, pass1, promo);
     database.query('SELECT * FROM accounts WHERE socialClub = ?', [player.socialClub], (err, result) => {
-        if(err) {
+        if (err) {
             console.log('Ошибка при проверке существования аккаунта:', err);
         } else {
-            if(result.length > 0) {
+            if (result.length > 0) {
                 console.log('У вас уже есть аккаунт.');
             } else {
-                database.query('INSERT INTO accounts (socialClub, email, login, password, promo) VALUES (?, ?, ?, ?, ?)', [player.socialClub, email, loginReg, pass1, promo], (err, result) => {
-                    if(err) {
+                database.query('INSERT INTO accounts (socialClub, email, login, password, promo, adminlvl) VALUES (?, ?, ?, ?, ?, 0)', [player.socialClub, email, loginReg, pass1, promo], (err, result) => {
+                    if (err) {
                         console.log('Ошибка при регистрации:', err);
                     } else {
                         console.log('Пользователь успешно зарегистрирован.');

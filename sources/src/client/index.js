@@ -1,5 +1,4 @@
 import './basic/auth';
+import './basic/death'
 import './helpers/browser';
-import './helpers/dl';
 import './helpers/ui';
-import './utils/binds';
