@@ -19,3 +19,9 @@ mp.events.addCommand('delveh', (player) => {
         }
     }
 });
+
+mp.events.addCommand('tpc', (player, _, x, y, z) => {
+    if (player.data.adminlvl > 0) {
+        player.position = new mp.Vector3(parseFloat(x), parseFloat(y), parseFloat(z));
+    }
+})
