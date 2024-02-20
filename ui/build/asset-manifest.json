@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "./static/css/main.f9692031.css",
-    "main.js": "./static/js/main.c517f9d7.js",
+    "main.js": "./static/js/main.50d9faec.js",
     "static/media/Montserrat-SemiBold.ttf": "./static/media/Montserrat-SemiBold.d5e0cc788cba9ced1fb9.ttf",
     "static/media/Montserrat-Medium.ttf": "./static/media/Montserrat-Medium.c86e3b9010ff63c99166.ttf",
     "static/media/Montserrat-Bold.ttf": "./static/media/Montserrat-Bold.2c155811b35513d5beaa.ttf",
     "static/media/Montserrat-Light.ttf": "./static/media/Montserrat-Light.6fcc9263a21be961d246.ttf",
     "static/media/Montserrat-Regular.ttf": "./static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
     "static/media/logo.png": "./static/media/logo.ed4c3f4ed525a7721365.png",
-    "static/media/promo.svg": "./static/media/promo.d002f80228c47ccb72486a926488bbac.svg",
-    "static/media/list_row.svg": "./static/media/list_row.0e6931ead659fd9bcd17e23588ede97f.svg",
-    "static/media/email.svg": "./static/media/email.9591cba990261742ab9dd2fc1e6df905.svg",
+    "static/media/promo.svg": "./static/media/promo.589c15a1b6d00e09c71342adaa46a341.svg",
+    "static/media/list_row.svg": "./static/media/list_row.91c5bf90a718cb3605a6a25499080fd7.svg",
+    "static/media/email.svg": "./static/media/email.b7474490bef667de7f197fa7e17d21be.svg",
     "index.html": "./index.html",
-    "static/media/lock.svg": "./static/media/lock.9bcececf1de45af0066d5df5438f74e5.svg",
-    "static/media/user.svg": "./static/media/user.af85c83b3ecac72eb28f22eb130c2af4.svg",
+    "static/media/lock.svg": "./static/media/lock.dd1c63d9c86c799f8cdab72518f18999.svg",
+    "static/media/user.svg": "./static/media/user.0b2a255d5e1469f6da8b204daf390461.svg",
     "main.f9692031.css.map": "./static/css/main.f9692031.css.map",
-    "main.c517f9d7.js.map": "./static/js/main.c517f9d7.js.map"
+    "main.50d9faec.js.map": "./static/js/main.50d9faec.js.map"
   },
   "entrypoints": [
     "static/css/main.f9692031.css",
-    "static/js/main.c517f9d7.js"
+    "static/js/main.50d9faec.js"
   ]
 }
