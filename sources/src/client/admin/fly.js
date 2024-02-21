@@ -39,7 +39,7 @@ mp.keys.bind(controlsIds.F3, false, function () {
             player.setCoordsNoOffset(position.x, position.y, position.z, false, false, false);
         }
     
-        mp.game.graphics.notify(fly.flying ? '~g~Полёт включен' : '~r~Полёт выключен');
+        showCustomNotify(fly.flying ? 'Полёт включен' : 'Полёт выключен');
     } else {
         mp.game.graphics.notify('~r~Недостаточно прав для использования команды');
     }
