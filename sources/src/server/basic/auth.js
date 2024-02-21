@@ -13,6 +13,7 @@ mp.events.add('sendDataToAuthorization', (player, username, pass) => {
                 console.log('Аккаунт успешно прошел верификацию.');
                 player.data.adminlvl = rows[0].adminlvl;
                 player.call('Ready');
+                player.call('notifications');
             } else {
                 console.log('Неверный логин или пароль.');
             }

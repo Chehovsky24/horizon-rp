@@ -4,9 +4,9 @@ sceneryCamera.pointAtCoord(402.8664, -996.4108, -98.5);
 
 mp.events.add('auth', () => {
     browser(true);
-    callCef('authorization', '{"type": "show"}')
+    callCef('authorization', '{"type": "show"}');
 	sceneryCamera.setActive(true);
-    mp.game.cam.renderScriptCams(true, false, 0, true, false);;
+    mp.game.cam.renderScriptCams(true, false, 0, true, false);
 });
 
 mp.events.add('signin', (username, pass) => {

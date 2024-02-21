@@ -7,10 +7,12 @@ mp.events.add('death', () => {
 
 mp.events.add('client:death:btn', (type) => {
     mp.console.logInfo(`Вывод: ${type}`);
-    if (type === 'death') {
-        mp.gui.cursor.show(false, false);
-        mp.game.ui.displayRadar(true);
-        callCef('death', '{"type": "hide"}');
-        mp.events.callRemote('sendDataToDeathSpawn');
+    switch (type) {
+        case 'death':
+            mp.gui.cursor.show(false, false);
+            mp.game.ui.displayRadar(true);
+            callCef('death', '{"type": "hide"}');
+            mp.events.callRemote('sendDataToDeathSpawn');
+            break;
     }
 });
