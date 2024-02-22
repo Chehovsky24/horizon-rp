@@ -25,3 +25,9 @@ mp.events.addCommand('tpc', (player, _, x, y, z) => {
         player.position = new mp.Vector3(parseFloat(x), parseFloat(y), parseFloat(z));
     }
 })
+
+mp.events.addCommand('time', (player, hour, minute, second) => {
+    if (player.data.adminlvl > 0) {
+        mp.world.time.set(hour, minute, second);
+    }
+});

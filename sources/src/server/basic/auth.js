@@ -5,7 +5,7 @@ mp.events.add('playerReady', (player) => {
 
 mp.events.add('sendDataToAuthorization', (player, username, pass) => {
     console.log('Вывод данных при авторизации:', username, pass);
-    database.query(`SELECT * FROM accounts WHERE login = '${username}' AND password = '${pass}'`, (err, rows) => {
+    database.query(`SELECT * FROM accounts WHERE login = ? AND password = ?`, [username, pass], (err, rows) => {
         if(err) {
             console.log('Ошибка:', err);
         } else {
