@@ -1,28 +1,25 @@
 .auth-main {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	width: auto;
 	height: auto;
 	min-width: 21.354vw;
 	max-width: 21.354vw;
+	animation: auth-main 1s ease-in forwards;
 
 	&_wrapper {
-		position: absolute;
-		top: 50%;
 		height: auto;
 		width: auto;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		transform: translateY(-50%);
-		animation: _wrapper 0.8s ease-in forwards;
 	}
 
-	@keyframes _wrapper {
+	@keyframes auth-main {
 		0% {
-			right: -10%;
+			top: -20%;
 			opacity: 0;
 		}
 		100% {
-			right: 3.2vw;
+			top: 50%;
 			opacity: 1;
 		}
 	}
@@ -33,38 +30,39 @@
 	}
 
 	.header-title {
-		font-style: normal;
-		font-weight: 700;
-		font-size: $s36px;
-		line-height: 4.578vh;
-		text-transform: uppercase;
-		text-align: right;
+		font-family: 'PFDinDisplayPro';
+		font-weight: 500;
+		font-size: $s30px;
+		text-align: center;
 	}
 
 	.header-text {
-		font-style: normal;
-		font-weight: 400;
-		font-size: $s20px;
-		line-height: 2.497vh;
+		font-family: 'PFDinDisplayPro';
+		font-weight: 300;
+		font-size: $s16px;
 		color: rgba(255, 255, 255, 0.45);
-		text-align: right;
+		text-align: center;
 	}
 
 	.button-auth {
-		height: 7.804vh;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 21.479958890030833vh;
+		height: 4.008221993833504vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		margin-top: $default-elements-offset;
-		border-radius: $default-border;
 		color: #fff;
-		font-weight: 600;
-		font-size: $s18px;
+		font-family: 'PFDinDisplayPro';
+		font-weight: 300;
+		font-size: $s16px;
 		line-height: 2.289vh;
 	}
 
 	.primary {
-		background: linear-gradient(90deg, rgba(243, 9, 37, 0.5), rgba(179, 10, 41, 0.5), $primary-left, $primary-right);
+		background: rgba(255, 255, 255, 0.15);
 		background-size: 300%;
 		background-position: left;
 		box-shadow: 0px 0px 45px transparent;
@@ -72,86 +70,24 @@
 
 		&:hover {
 			background-position: right;
-			box-shadow: 0px 0px 45px rgba(209, 10, 39, 0.15);
 			transition: background 0.4s ease-out, box-shadow 0.4s ease-out;
 		}
-	}
-
-	.gray {
-		background: rgba(255, 255, 255, 0.06);
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		color: #fff;
-		transition: background 0.4s ease-out;
-
-		&:hover {
-			background: rgba(255, 255, 255, 0.12);
-			background-position: right;
-		}
-	}
-
-	.red {
-		background: rgba(209, 127, 127, 0.2);
-		border: 1px solid rgba(209, 127, 127, 0.2);
-		color: #fff;
-		transition: background 0.4s ease-out;
-
-		&:hover {
-			background: rgba(209, 127, 127, 0.4);
-			background-position: right;
-		}
-	}
-
-	.reg-button {
-		height: 4.162vh !important;
-		width: 10.416vw !important;
-		font-size: $s12px;
-		margin: 0 !important;
 	}
 
 	.reg-buttons-wrapper {
 		display: flex;
 		flex-direction: row;
-		justify-content: flex-end;
+		justify-content: center;
 		align-items: center;
 		margin-top: 1.56vh;
 	}
 
 	.reg-text {
-		font-style: normal;
+		font-family: 'PFDinDisplayPro';
 		font-weight: 500;
 		font-size: 1.2149532710280373vh;
-		line-height: 16px;
-		letter-spacing: 0.05em;
 		color: rgba(255, 255, 255, 0.45);
-		margin-right: $default-offset;
-	}
-
-	.recovery-wrapper {
-		margin-top: 1.04vh;
-		margin-left: 0.52vw;
-		display: flex;
-		flex-direction: row;
-		font-style: normal;
-		font-weight: 500;
-		font-size: $s12px;
-		line-height: 1.664vh;
-		color: rgba(255, 255, 255, 0.45);
-
-		a {
-			margin-left: 0.26vw;
-			text-decoration-line: underline;
-		}
-	}
-
-	.recovery-inputs {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-
-		.auth-input input {
-			width: calc(3.645vw - $default-offset * 3);
-			padding: 0 $default-offset * 1.5 0 $default-offset * 1.5;
-		}
+		margin-right: 0.3vw;
 	}
 
 	.auth-input {
@@ -163,7 +99,7 @@
 			position: absolute;
 			width: 0.9375vw;
 			height: auto;
-			margin-top: calc(7.284vh / 2);
+			margin-top: calc(4.316546762589928vh / 2);
 			transform: translateY(-50%);
 			margin-left: $default-offset;
 			fill: $primary-center;
@@ -180,41 +116,21 @@
 		}
 
 		& input {
-			height: 7.284vh;
+			height: 4.316546762589928vh;
 			width: auto;
-			background: rgba(91, 91, 91, 0.05);
-			backdrop-filter: none;
-			border-radius: 0.5607476635514018vh;
-			color: rgba(196, 196, 196, 0.45);
+			color: white;
 			font-weight: 500;
 			font-size: $s16px;
 			line-height: 1.873vh;
 			padding: 0 $default-offset 0 calc($default-offset * 2 + 0.9375vw);
 			transition: background 0.4s;
-		}
+			border: 0.10277492291880781vh solid rgba(91, 91, 91, 0.663);
+		}  
 
-		& input:focus {
-			background: rgba(122, 122, 122, 0.1);
-			color: rgba(255, 255, 255, 1);
-			transition: background 0.4s;
-		}
-
-		& input:hover {
-			background: rgba(122, 122, 122, 0.1);
-			transition: background 0.4s;
+		& input::placeholder {
+			color: rgba(196, 196, 196, 0.45);
 		}
 	}
-}
-
-.auth-main__left-top {
-	position: absolute;
-	top: 10.4vh;
-	height: auto;
-	width: auto;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	animation: main__left-top 0.8s ease-in forwards;
 }
 
 @keyframes main__left-top {
@@ -246,7 +162,7 @@
 		opacity: 0;
 	}
 	100% {
-		left: 3.2vw;
+		left: -1vw;
 		opacity: 1;
 	}
 }
@@ -255,10 +171,11 @@
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
-	margin-top: 4.162vh;
-	img {
-		width: 3.33vh;
-		height: 3.33vh;
+	margin-top: 6.162vh;
+	.auth-main__left-row-line {
+		width: 6.988694758478931vh;
+		transform: rotate(90.00deg);
+		border: 0.20554984583761562vh solid rgba(255, 255, 255, 0.5);
 	}
 }
 
@@ -267,95 +184,26 @@
 }
 
 .auth-main__left-row-wrapper {
-	margin-left: 0.78125vw;
+	margin-left: -1.21875vw;
+    margin-top: -1.85vw;
 }
 
 .auth-main__left-row-title {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 700;
-	font-size: $s28px;
-	line-height: 3.538vh;
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
+	font-family: 'PFDinDisplayPro';
+	font-weight: 500;
+	font-size: $s18px;
 }
 
 .auth-main__left-row-text {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 500;
-	font-size: $s16px;
-	line-height: 1.873vh;
+	font-family: 'PFDinDisplayPro';
+	font-weight: 300;
+	font-size: $s14px;
 	color: rgba(255, 255, 255, 0.5);
-}
-
-.auth-main__title {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 2.395vw;
-	line-height: 3.746vh;
-	text-transform: uppercase;
-}
-
-.auth-main__subtitle {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 500;
-	font-size: 1.354vw;
-	line-height: 3.121vh;
-	text-transform: uppercase;
-}
-
-.auth-main__name {
-	margin-left: 1.56vw;
-}
-
-.auth-main__logo img {
-	height: 10.4vh;
-	width: 10.4vh;
-}
-
-.offset-top {
-	margin-top: $default-offset;
-}
-
-.recovery-password {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
-	.button-auth {
-		margin-top: 0 !important;
-		min-width: 8.85vw;
-	}
-
-	.header-text {
-		margin-top: 0 !important;
-		max-width: 6.25vw;
-	}
-}
-
-.alert-enter {
-	opacity: 0;
-}
-.alert-enter-active {
-	opacity: 1;
-	transition: opacity 200ms;
-}
-.alert-exit {
-	opacity: 1;
-}
-.alert-exit-active {
-	opacity: 0;
-	transition: opacity 200ms;
 }
 
 .background-blackout-auth {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(89.76deg, rgba(16, 16, 16, 0.9) -32.06%, rgba(13, 13, 13, 0.9) 136.87%);
-	transform: matrix(-1, 0, 0, 1, 0, 0);
-	z-index: -1;
+	background: rgba(28, 28, 28, 0.838);
 }

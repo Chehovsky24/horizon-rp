@@ -1,8 +1,6 @@
 import React from 'react';
 import {CSSTransition} from 'react-transition-group';
 
-import logo from './images/logo.png';
-import list_row from './images/list_row.svg';
 import user from './images/user.svg';
 import lock from './images/lock.svg';
 import email from './images/email.svg';
@@ -24,18 +22,6 @@ class Authorization extends React.Component {
 			promo: '',
 			pass1: '',
 			pass2: '',
-			pagePlayer: '',
-
-			recoveryCode1: '',
-			recoveryInput1: undefined,
-			recoveryCode2: '',
-			recoveryInput2: undefined,
-			recoveryCode3: '',
-			recoveryInput3: undefined,
-			recoveryCode4: '',
-			recoveryInput4: undefined,
-			recoveryCode5: '',
-			recoveryInput5: undefined,
 		}
 	}
 
@@ -103,64 +89,6 @@ class Authorization extends React.Component {
 		this.setState({pass2: event.target.value.replace(/[^a-zA-Z0-9]+/g, '')})
 	}
 
-	recoveryCode1(event) {
-		this.setState({recoveryCode1: event.target.value})
-		if (event.target.value != '') {
-			if (this.state.recoveryInput2 != undefined) {
-				this.state.recoveryInput2.focus()
-			}
-		}
-	}
-
-	recoveryCode2(event) {
-		this.setState({recoveryCode2: event.target.value})
-		if (event.target.value != '') {
-			if (this.state.recoveryInput3 != undefined) {
-				this.state.recoveryInput3.focus()
-			}
-		} else {
-			if (this.state.recoveryInput1 != undefined) {
-				this.state.recoveryInput1.focus()
-			}
-		}
-	}
-
-	recoveryCode3(event) {
-		this.setState({recoveryCode3: event.target.value})
-		if (event.target.value != '') {
-			if (this.state.recoveryInput4 != undefined) {
-				this.state.recoveryInput4.focus()
-			}
-		} else {
-			if (this.state.recoveryInput2 != undefined) {
-				this.state.recoveryInput2.focus()
-			}
-		}
-	}
-
-	recoveryCode4(event) {
-		this.setState({recoveryCode4: event.target.value})
-		if (event.target.value != '') {
-			if (this.state.recoveryInput5 != undefined) {
-				this.state.recoveryInput5.focus()
-			}
-		} else {
-			if (this.state.recoveryInput3 != undefined) {
-				this.state.recoveryInput3.focus()
-			}
-		}
-	}
-
-	recoveryCode5(event) {
-		this.setState({recoveryCode5: event.target.value})
-		if (event.target.value != '') {
-		} else {
-			if (this.state.recoveryInput4 != undefined) {
-				this.state.recoveryInput4.focus()
-			}
-		}
-	}
-
 	clickLogin() {
 		try {
 			if (!this.state.login) {
@@ -189,19 +117,9 @@ class Authorization extends React.Component {
 		return (
 			<React.Fragment>
 				<div className='background-blackout-auth' />
-				<div className='auth-main__left-top'>
-					<div className='auth-main__logo'>
-						<img src={logo} />
-					</div>
-					<div className='auth-main__name'>
-						<div className='auth-main__title'>Horizon</div>
-						<div className='auth-main__subtitle'>Role Play</div>
-					</div>
-				</div>
-
 				<div className='auth-main__left'>
 					<div className='auth-main__left-row'>
-						<img src={list_row} />
+						<div className='auth-main__left-row-line'></div>
 
 						<div className='auth-main__left-row-wrapper'>
 							<div className='auth-main__left-row-title'>Уникальный мод</div>
@@ -216,7 +134,7 @@ class Authorization extends React.Component {
 					</div>
 
 					<div className='auth-main__left-row'>
-						<img src={list_row} />
+						<div className='auth-main__left-row-line'></div>
 
 						<div className='auth-main__left-row-wrapper'>
 							<div className='auth-main__left-row-title'>Стильный дизайн</div>
@@ -231,7 +149,7 @@ class Authorization extends React.Component {
 					</div>
 
 					<div className='auth-main__left-row'>
-						<img src={list_row} />
+						<div className='auth-main__left-row-line'></div>
 
 						<div className='auth-main__left-row-wrapper'>
 							<div className='auth-main__left-row-title'>Уникальные системы</div>
@@ -252,7 +170,7 @@ class Authorization extends React.Component {
 								<div className='auth-main'>
 									<React.Fragment>
 										<div className='header-title'>Авторизация</div>
-										<div className='header-text'>C возвращением!</div>
+										<div className='header-text'>С возвращением, на Horizon RolePlay!</div>
 										<div className='auth-input'>
 											<img src={user} />
 											<input
@@ -278,30 +196,13 @@ class Authorization extends React.Component {
 											/>
 										</div>
 
-										<div className='recovery-wrapper'>
-											<div className='recovery-text'>Забыли пароль?</div>
-											<a
-												className='recovery-link'
-												onClick={() => {
-													this.handleChange('recovery-email')
-												}}>
-												Восстанови его!
-											</a>
-										</div>
-
 										<div className='button-auth primary' onClick={this.clickLogin.bind(this)}>
-											Войти
+											Авторизоваться
 										</div>
 
-										<div className='reg-buttons-wrapper'>
+										<div className='reg-buttons-wrapper' onClick={() => {this.handleChange('register')}}>
 											<div className='reg-text'>Нет аккаунта?</div>
-											<div
-												className='button-auth primary reg-button'
-												onClick={() => {
-													this.handleChange('register')
-												}}>
-												Зарегистрироваться
-											</div>
+											<div className='reg-text'>Зарегистрироваться</div>
 										</div>
 									</React.Fragment>
 								</div>
@@ -375,148 +276,9 @@ class Authorization extends React.Component {
 										Готово
 									</div>
 
-									<div className='reg-buttons-wrapper'>
+									<div className='reg-buttons-wrapper' onClick={() => {this.handleChange('login')}}>
 										<div className='reg-text'>Уже есть аккаунт?</div>
-										<div
-											className='button-auth primary reg-button'
-											onClick={() => {
-												this.handleChange('login')
-											}}>
-											Войти
-										</div>
-									</div>
-								</React.Fragment>
-							</div>
-						) : null}
-						{this.state.activeForm == 'recovery-email' ? (
-							<div className='auth-main'>
-								<React.Fragment>
-									<div className='header-title'>Восстановление</div>
-									<div className='header-text'>Не забывайте ваш пароль!</div>
-									<div className='auth-input'>
-										<img src={email} />
-										<input
-											type='text'
-											placeholder='Введите свой E-mail'
-											name='create-email'
-											className='reg-input-style'
-											value={this.state.email}
-											onChange={this.valueMailReg.bind(this)}
-										/>
-									</div>
-									<div
-										className='button-auth primary'
-										onClick={() => {
-											mp.trigger('client.auth.restorePassword', 0, this.state.email) // eslint-disable-line
-										}}>
-										Отправить код
-									</div>
-
-									<div className='reg-buttons-wrapper'>
-										<div className='reg-text'>Вспомнили пароль?</div>
-										<div
-											className='button-auth primary reg-button'
-											onClick={() => {
-												this.handleChange('username')
-											}}>
-											Войти
-										</div>
-									</div>
-								</React.Fragment>
-							</div>
-						) : null}
-
-						{this.state.activeForm == 'recovery-code' ? (
-							<div className='auth-main'>
-								<React.Fragment>
-									<div className='header-title'>Восстановление</div>
-									<div className='header-text'>Не забывайте ваш пароль!</div>
-									<div className='recovery-inputs'>
-										<div className='auth-input'>
-											<input
-												ref={(input) => {
-													this.state.recoveryInput1 = input
-												}}
-												type='value'
-												maxLength={1}
-												name='recovery-code1'
-												className='reg-input-style'
-												value={this.state.recoveryCode1}
-												onChange={this.recoveryCode1.bind(this)}
-											/>
-										</div>
-										<div className='auth-input'>
-											<input
-												ref={(input) => {
-													this.state.recoveryInput2 = input
-												}}
-												type='value'
-												maxLength={1}
-												name='recovery-code2'
-												className='reg-input-style'
-												value={this.state.recoveryCode2}
-												onChange={this.recoveryCode2.bind(this)}
-											/>
-										</div>
-										<div className='auth-input'>
-											<input
-												ref={(input) => {
-													this.state.recoveryInput3 = input
-												}}
-												type='value'
-												maxLength={1}
-												name='recovery-code3'
-												className='reg-input-style'
-												value={this.state.recoveryCode3}
-												onChange={this.recoveryCode3.bind(this)}
-											/>
-										</div>
-										<div className='auth-input'>
-											<input
-												ref={(input) => {
-													this.state.recoveryInput4 = input
-												}}
-												type='value'
-												maxLength={1}
-												name='recovery-code4'
-												className='reg-input-style'
-												value={this.state.recoveryCode4}
-												onChange={this.recoveryCode4.bind(this)}
-											/>
-										</div>
-										<div className='auth-input'>
-											<input
-												ref={(input) => {
-													this.state.recoveryInput5 = input
-												}}
-												type='value'
-												maxLength={1}
-												name='recovery-code5'
-												className='reg-input-style'
-												value={this.state.recoveryCode5}
-												onChange={this.recoveryCode5.bind(this)}
-											/>
-										</div>
-									</div>
-									<div
-										className='button-auth primary'
-										onClick={() => {
-											this.handleChange('recovery-code')
-										}}>
-										{' '}
-										{/* TODO */}
-										Отправить код
-									</div>
-
-									<div className='reg-buttons-wrapper'>
-										<div className='reg-text'>Вспомнили пароль?</div>
-										<div
-											className='button-auth primary reg-button'
-											onClick={() => {
-												this.handleChange('login')
-											}}>
-											Войти
-										</div>
+										<div className='reg-text'>Войти</div>
 									</div>
 								</React.Fragment>
 							</div>
