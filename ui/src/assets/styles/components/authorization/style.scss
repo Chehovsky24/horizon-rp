@@ -69,8 +69,9 @@
 		transition: background 0.4s ease-out, box-shadow 0.4s ease-out;
 
 		&:hover {
-			background-position: right;
-			transition: background 0.4s ease-out, box-shadow 0.4s ease-out;
+			background: rgb(152, 1, 18);
+			box-shadow: 0 0 2.29vh rgba(201, 20, 42, 0.51);
+			transition: all 0.2s ease-out;
 		}
 	}
 
@@ -123,9 +124,13 @@
 			font-size: $s16px;
 			line-height: 1.873vh;
 			padding: 0 $default-offset 0 calc($default-offset * 2 + 0.9375vw);
-			transition: background 0.4s;
+			transition: border 0.4s;
 			border: 0.10277492291880781vh solid rgba(91, 91, 91, 0.663);
-		}  
+		}
+
+		& input:focus {
+			border: 0.10277492291880781vh solid rgb(152, 1, 18);
+		}
 
 		& input::placeholder {
 			color: rgba(196, 196, 196, 0.45);
@@ -203,6 +208,8 @@
 
 .background-blackout-auth {
 	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	background: rgba(28, 28, 28, 0.838);

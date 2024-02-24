@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.8e35392a.css",
-    "main.js": "./static/js/main.f2f054e6.js",
+    "main.css": "./static/css/main.2ed56db2.css",
+    "main.js": "./static/js/main.fb88cd88.js",
     "static/media/PFDinDisplayPro-Light.ttf": "./static/media/PFDinDisplayPro-Light.1a72f6a117377d9e87c7.ttf",
     "static/media/PFDinDisplayPro-Medium.ttf": "./static/media/PFDinDisplayPro-Medium.a845fe2560b5fac3850d.ttf",
     "static/media/Montserrat-SemiBold.ttf": "./static/media/Montserrat-SemiBold.d5e0cc788cba9ced1fb9.ttf",
@@ -14,11 +14,11 @@
     "index.html": "./index.html",
     "static/media/lock.svg": "./static/media/lock.dd1c63d9c86c799f8cdab72518f18999.svg",
     "static/media/user.svg": "./static/media/user.0b2a255d5e1469f6da8b204daf390461.svg",
-    "main.8e35392a.css.map": "./static/css/main.8e35392a.css.map",
-    "main.f2f054e6.js.map": "./static/js/main.f2f054e6.js.map"
+    "main.2ed56db2.css.map": "./static/css/main.2ed56db2.css.map",
+    "main.fb88cd88.js.map": "./static/js/main.fb88cd88.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e35392a.css",
-    "static/js/main.f2f054e6.js"
+    "static/css/main.2ed56db2.css",
+    "static/js/main.fb88cd88.js"
   ]
 }

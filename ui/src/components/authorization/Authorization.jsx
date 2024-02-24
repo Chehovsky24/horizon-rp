@@ -122,13 +122,13 @@ class Authorization extends React.Component {
 						<div className='auth-main__left-row-line'></div>
 
 						<div className='auth-main__left-row-wrapper'>
-							<div className='auth-main__left-row-title'>Уникальный мод</div>
+							<div className='auth-main__left-row-title'>Самописный мод</div>
 							<div className='auth-main__left-row-text'>
-								Наша команда разработчиков очень старалась над нашим
+								Наша команда KWERT STUDIO старалась над своим игровым
 								<br />
-								игровым модом, на нашем моде множество уникальных
+								модом, на нашем моде уже есть множество уникальных
 								<br />
-								систем и механик.
+								механик.
 							</div>
 						</div>
 					</div>
@@ -137,13 +137,13 @@ class Authorization extends React.Component {
 						<div className='auth-main__left-row-line'></div>
 
 						<div className='auth-main__left-row-wrapper'>
-							<div className='auth-main__left-row-title'>Стильный дизайн</div>
+							<div className='auth-main__left-row-title'>Современный дизайн</div>
 							<div className='auth-main__left-row-text'>
-								Мы сделали уникальный - стильный, современный дизайн.
+								Команда KWERT STUDIO старалась сделать уникальный, стильный а главное
 								<br />
-								Каждый интерфейс максимально удобен и красивый, наш
+								удобный дизайн. Каждый интерфейс был разаботан по самым главным
 								<br />
-								дизайн сделан командой профисионалных дизайнеров.
+								критериям удобен и красивый.
 							</div>
 						</div>
 					</div>
@@ -154,11 +154,11 @@ class Authorization extends React.Component {
 						<div className='auth-main__left-row-wrapper'>
 							<div className='auth-main__left-row-title'>Уникальные системы</div>
 							<div className='auth-main__left-row-text'>
-								Мы прошли через многое что бы сделать наш проект был
+								Команда KWERT STUDIO предлогает удобные а главное уникальные системы
 								<br />
-								№1 среди всех проектов GTA V, мы делаем наилучшие системы
+								и мехники которые вы не найдёте на других проектах
 								<br />
-								и мехники которые вы не найдёте на других проектах...
+								и это всё под названием Horizon RolePlay.
 							</div>
 						</div>
 					</div>
