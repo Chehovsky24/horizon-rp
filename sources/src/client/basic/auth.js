@@ -51,6 +51,14 @@ mp.events.add('signup', (email, loginReg, pass1, pass2, promo) => {
 mp.events.add('Ready', () => {
 	browser(false);
     callCef('authorization', '{"type": "hide"}');
+	callCef('hud', JSON.stringify(
+		{
+			type: 'updateValues',
+			district: getDistrict(),
+			street: getStreet(),
+			playerId: getPlayerId(),
+			online: getOnline(),
+		}));
 	sceneryCamera.setActive(false);
     mp.game.cam.renderScriptCams(false, false, 0, true, false);
 });

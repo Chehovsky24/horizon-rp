@@ -2,6 +2,8 @@ import './admin/fly';
 import './admin/pos';
 import './basic/auth';
 import './basic/death';
+import './basic/hud';
+import './basic/location';
 import './basic/notify';
 import './fraction/ems';
 import './helpers/browser';
