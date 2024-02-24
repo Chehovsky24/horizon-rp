@@ -5,6 +5,7 @@ sceneryCamera.pointAtCoord(402.8664, -996.4108, -98.5);
 mp.events.add('auth', () => {
     browser(true);
     callCef('authorization', '{"type": "show"}');
+	mp.discord.update('Horizon RolePlay', mp.players.local.name);
 	sceneryCamera.setActive(true);
     mp.game.cam.renderScriptCams(true, false, 0, true, false);
 });
