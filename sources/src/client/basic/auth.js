@@ -14,11 +14,11 @@ mp.events.add('signin', (username, pass) => {
     username = username.toLowerCase();
 	username = username.replace(/[^a-zA-Z0-9\s]/gi, '');
 	if (username === '') {
-		mp.console.logInfo('Логин - поле не заполнено');
+		showCustomNotify('Логин - поле не заполнено');
 		return
 	}
 	if (pass === '') {
-		mp.console.logInfo('Пароль - поле не заполнено');
+		showCustomNotify('Пароль - поле не заполнено');
 		return
 	}
 
@@ -27,22 +27,22 @@ mp.events.add('signin', (username, pass) => {
 
 mp.events.add('signup', (email, loginReg, pass1, pass2, promo) => {
 	if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(String(email).toLowerCase())) {
-		mp.console.logInfo('Email - не валидный адрес');
+		showCustomNotify('Email - не валидный адрес');
 		return
 	}
 	email = email.toLowerCase();
 	loginReg = loginReg.toLowerCase();
 	loginReg = loginReg.replace(/[^a-zA-Z0-9\s]/gi, '');
 	if (loginReg === '') {
-		mp.console.logInfo('Логин - поле не заполнено');
+		showCustomNotify('Логин - поле не заполнено');
 		return
 	}
 	if (pass1 === '') {
-		mp.console.logInfo('Пароль - поле не заполнено');
+		showCustomNotify('Пароль - поле не заполнено');
 		return
 	}
 	if (pass1 !== pass2) {
-		mp.console.logInfo('Пароли не совпадают');
+		showCustomNotify('Пароли не совпадают');
 		return
 	}
 
