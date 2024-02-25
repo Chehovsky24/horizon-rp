@@ -7,7 +7,7 @@ mp.events.add('client:user:showCustomHud', () => {
                 district: getDistrict(),
                 street: getStreet(),
                 playerId: getPlayerId(),
-                online: getOnline()
+                online: getOnline(),
             }
         ));
     }, 5000);
