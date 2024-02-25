@@ -58,7 +58,7 @@ mp.events.add('Ready', () => {
 			district: getDistrict(),
 			street: getStreet(),
 			playerId: getPlayerId(),
-			online: getOnline(),
+			online: getOnline()
 		}));
 	sceneryCamera.setActive(false);
     mp.game.cam.renderScriptCams(false, false, 0, true, false);
