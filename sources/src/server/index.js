@@ -1,5 +1,6 @@
 import './admin/commands';
 import './basic/auth';
+import './basic/chat';
 import './basic/death';
 import './basic/notify';
 import './fractions/ems/index';
