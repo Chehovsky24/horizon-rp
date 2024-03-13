@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "mysql": "^2.18.1"
+  },
+  "dependencies": {
+    "colors": "^1.4.0"
   }
 }

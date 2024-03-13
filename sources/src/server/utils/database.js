@@ -1,4 +1,5 @@
 import mysql from 'mysql';
+import methods from './methods';
 
 global.database = mysql.createConnection({
     host: mp.config.database.host,
@@ -9,8 +10,8 @@ global.database = mysql.createConnection({
 
 database.connect((err) => {
     if(err) {
-        console.log('Ошибка:', err);
+        methods.error('Ошибка:', err);
     } else {
-        console.log('База данных успешно подключена.');
+        methods.done('База данных успешно подключена.');
     }
 });
