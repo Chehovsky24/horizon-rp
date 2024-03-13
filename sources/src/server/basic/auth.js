@@ -1,3 +1,5 @@
+import methods from '../utils/methods';
+
 mp.events.add('playerReady', (player) => {
     player.call('auth');
     player.dimension = 0;
