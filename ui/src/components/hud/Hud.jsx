@@ -4,6 +4,20 @@ import EventManager from '../../EventManager';
 
 import logo from './images/logo.svg';
 
+const keys = {
+	'~': 'Курсор',
+	Z: 'Микрофон',
+	ALT: 'Меню игрока и ТС',
+	I: 'Инвентарь игрока',
+	Y: 'Инвентарь ТС',
+	M: 'Телефон',
+	U: 'Останов. анимацию',
+	L: 'Замок ТС',
+	'2': 'Двигатель ТС',
+	G: 'Ремень безопасности',
+	'0': 'Скрыть HUD'
+};
+
 class Hud extends React.Component {
 	constructor(props) {
 		super(props)
@@ -41,13 +55,23 @@ class Hud extends React.Component {
 		}
 		return (
             <div className='hud'>
-				<div className="hud_online">
+				<div className='hud_help'>
+					<ul className='hud_help-list'>
+						{Object.entries(keys).map(([key, value], index) => (
+							<li className='hud_help-item' key={index}>
+								<h4 className='hud_help-name'>{key}</h4>
+								<p className='hud_help-desc'>{value}</p>
+							</li>
+						))}
+					</ul>
+				</div>
+				<div className='hud_online'>
 					<img src={logo} alt="logo" />
 
-					<div className="hud_online-container">
-						<p className="player-id">ID:{this.state.playerId}</p>
+					<div className='hud_online-container'>
+						<p className='player-id'>ID:{this.state.playerId}</p>
 
-						<div className="hud_online-count">
+						<div className='hud_online-count'>
 							<IoIosPerson />
 							<span>{this.state.online}</span>
 						</div>
