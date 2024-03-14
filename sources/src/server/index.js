@@ -3,6 +3,7 @@ import './basic/auth';
 import './basic/chat';
 import './basic/death';
 import './basic/notify';
+import './basic/voice';
 import './fractions/ems/index';
 import './helpers/building';
 import './utils/database';

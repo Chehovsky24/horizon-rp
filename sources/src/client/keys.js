@@ -23,3 +23,17 @@ mp.keys.bind(50, false, () => {
         }
     }
 });
+
+mp.keys.bind(90, true, () => {
+	mp.voiceChat.muted = false;
+    showCustomNotify('Микрофон включен');
+	isMicrophone = true;
+	mp.players.local.playFacialAnim('mic_chatter', 'mp_facial');
+});
+
+mp.keys.bind(90, false, () => {
+	mp.voiceChat.muted = true;
+    showCustomNotify('Микрофон выключен');
+	isMicrophone = false;
+	mp.players.local.playFacialAnim('mood_normal_1', 'facials@gen_male@variations@normal');
+});
